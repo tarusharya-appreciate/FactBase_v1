@@ -157,4 +157,4 @@ with st.expander("ℹ️ Summary"):
 # ---- Auto refresh loop ----
 if auto_refresh:
     st.toast(f"Auto refresh in {refresh_every}s...", icon="♻️")
-    st.experimental_rerun()
+    st.rerun()
