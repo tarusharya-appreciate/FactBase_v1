@@ -18,9 +18,13 @@ st.sidebar.code(CSV_URL)
 path_to_read = CSV_URL
 
 # ---- Cache CSV load ----
-@st.cache_data(show_spinner=False)
+@st.cache_data(show_spinner=False, ttl=300)
 def read_csv_url(url: str) -> pd.DataFrame:
-    return pd.read_csv(url)
+    try:
+        return pd.read_csv(url)
+    except Exception as e:
+        st.warning("Couldn’t load today’s CSV. Try reloading or pick another date.")
+        raise
 
 def build_grid(df: pd.DataFrame):
     gb = GridOptionsBuilder.from_dataframe(df)
