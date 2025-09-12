@@ -11,7 +11,9 @@ st.caption("Filters, grouping, pivoting, sorting, export — powered by AgGrid")
 
 # ---- Hardcoded public URL (no AWS creds needed) ----
 BASE = "https://analytic-purposes.s3.ap-south-1.amazonaws.com/fact_base_alpaca/v1/live_update_file"
-CSV_URL = f"{BASE}/{datetime.now().strftime('%Y-%m-%d')}.csv"st.sidebar.header("Data Source (fixed)")
+CSV_URL = f"{BASE}/{datetime.now().strftime('%Y-%m-%d')}.csv"
+
+st.sidebar.header("Data Source (fixed)")
 st.sidebar.code(CSV_URL)
 path_to_read = CSV_URL
 
