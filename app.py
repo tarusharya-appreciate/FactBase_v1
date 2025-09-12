@@ -10,8 +10,7 @@ st.title("📊 Live Positions Dashboard")
 st.caption("Filters, grouping, pivoting, sorting, export — powered by AgGrid")
 
 # ---- Hardcoded public URL (no AWS creds needed) ----
-BASE = "https://analytic-purposes.s3.ap-south-1.amazonaws.com/fact_base_alpaca/v1/live_update_file"
-CSV_URL = f"{BASE}/{datetime.now().strftime('%Y-%m-%d')}.csv"
+CSV_URL = f"https://analytic-purposes.s3.ap-south-1.amazonaws.com/fact_base_alpaca/v1/live_update_file/{datetime.now().strftime('%Y-%m-%d')}.csv"
 
 st.sidebar.header("Data Source (fixed)")
 st.sidebar.code(CSV_URL)
