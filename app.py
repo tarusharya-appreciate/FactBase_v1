@@ -132,7 +132,7 @@ with st.sidebar:
     st.markdown("---")
     st.header("♻️ Auto Refresh")
     auto_refresh = st.toggle("Enable auto refresh", value=False)
-    refresh_every = st.number_input("Refresh interval (seconds)", min_value=120, max_value=600, value=200, step=5)
+    refresh_every = st.number_input("Refresh interval (seconds)", min_value=20, max_value=600, value=20, step=5)
 
     load_btn = st.button("📥 Load / Reload Data", use_container_width=True)
 
